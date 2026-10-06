@@ -34,8 +34,10 @@ import { site } from '../config';
 
 <style>
   .home-index {
-    display: grid;
-    grid-template-rows: 1fr 1.25fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(5rem, 12vh, 9rem);
     width: min(100% - 3rem, 72rem);
     min-height: 100svh;
     margin-inline: auto;
@@ -43,12 +45,10 @@ import { site } from '../config';
   }
 
   h1 {
-    align-self: end;
     margin-left: clamp(0rem, 8vw, 6rem);
   }
 
   .home-navigation {
-    align-self: center;
     margin-left: clamp(4rem, 29vw, 22rem);
   }
 
@@ -85,7 +85,7 @@ import { site } from '../config';
 
   @media (max-width: 40rem) {
     .home-index {
-      grid-template-rows: 1fr 1.3fr;
+      gap: clamp(4rem, 10vh, 6rem);
       padding-block: 2rem;
     }
 

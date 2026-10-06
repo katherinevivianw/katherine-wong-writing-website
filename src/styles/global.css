@@ -1,6 +1,14 @@
+@font-face {
+  font-family: 'Playwrite HR Guides Continuous';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/playwrite-hr-guides-continuous.woff') format('woff');
+}
+
 :root {
   color-scheme: light;
-  --font-display: 'Playwrite HR', cursive;
+  --font-display: 'Playwrite HR Guides Continuous', cursive;
   --font-body: 'Gaegu', sans-serif;
   --color-ink: #3b2a22;
   --font-size-title: clamp(2.1rem, 3.5vw, 3rem);
@@ -35,21 +43,10 @@ main {
 }
 
 h1 {
-  --guide-color: color-mix(in srgb, var(--color-ink) 72%, transparent);
   display: block;
   width: fit-content;
   max-width: 14ch;
   margin: 0;
-  padding-block: 0.18em 0.22em;
-  background:
-    linear-gradient(var(--guide-color), var(--guide-color)) 0 12% / 100% 1px
-      no-repeat,
-    linear-gradient(var(--guide-color), var(--guide-color)) 0 39% / 100% 1px
-      no-repeat,
-    linear-gradient(var(--guide-color), var(--guide-color)) 0 67% / 100% 1px
-      no-repeat,
-    linear-gradient(var(--guide-color), var(--guide-color)) 0 92% / 100% 1px
-      no-repeat;
   font-family: var(--font-display);
   font-size: var(--font-size-title);
   font-weight: 400;
