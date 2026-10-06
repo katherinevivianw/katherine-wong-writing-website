@@ -6,6 +6,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="About | Katherine Wong"
   description="About Katherine Wong."
 >
-  <h1>About</h1>
-  <p>Biography and portrait coming soon.</p>
+  <section class="about-introduction" aria-labelledby="about-heading">
+    <h1 id="about-heading">About</h1>
+    <p>
+      Katherine Wong is a writer from California and Taiwan. She studied
+      Symbolic Systems and Creative Writing at Stanford University, where she
+      worked on fiction with a Wallace Stegner Fellow through Stanford’s
+      Levinthal Tutorial program. She is currently writing a novel.
+    </p>
+  </section>
 </BaseLayout>
+
+<style>
+  .about-introduction {
+    display: grid;
+    gap: clamp(2.5rem, 8vw, 7rem);
+  }
+
+  p {
+    margin: 0;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+  }
+</style>
