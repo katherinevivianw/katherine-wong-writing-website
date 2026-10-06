@@ -6,6 +6,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Selected Writing | Katherine Wong"
   description="Selected writing by Katherine Wong."
 >
-  <h1>Selected Writing</h1>
-  <p>Coming soon!</p>
+  <section class="writing" aria-labelledby="writing-heading">
+    <h1 id="writing-heading">Selected Writing</h1>
+    <p>Coming soon!</p>
+  </section>
 </BaseLayout>
+
+<style>
+  .writing {
+    display: grid;
+    gap: clamp(2.5rem, 8vw, 7rem);
+  }
+
+  p {
+    margin: 0;
+  }
+</style>
