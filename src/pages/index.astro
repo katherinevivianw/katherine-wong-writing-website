@@ -10,12 +10,16 @@ import { site } from '../config';
   mainClass="home-main"
 >
   <div class="home-index">
-    <h1>{site.name}</h1>
+    <h1>
+      <a class="home-wordmark" href="/" aria-label={`${site.name}, home`}>
+        {site.name}
+      </a>
+    </h1>
 
     <nav class="home-navigation" aria-label="Primary navigation">
       <ul>
-        <li><a href="/writing/">Selected Writing</a></li>
         <li><a href="/about/">About</a></li>
+        <li><a href="/writing/">Selected Writing</a></li>
         <li>
           <a
             href={site.storyGraphUrl}
@@ -70,6 +74,15 @@ import { site } from '../config';
     text-decoration-thickness: 0.08em;
     text-underline-offset: 0.35em;
     transition: text-decoration-color 150ms ease;
+  }
+
+  .home-wordmark {
+    font-size: inherit;
+    text-decoration: none;
+  }
+
+  .home-wordmark:hover {
+    text-decoration: none;
   }
 
   a:hover {
