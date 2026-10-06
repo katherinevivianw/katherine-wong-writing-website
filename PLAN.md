@@ -10,6 +10,7 @@ The MVP will contain:
 - An About page
 - A Selected Writing page
 - An external link to Katherine's StoryGraph profile
+- A Contact page
 - A shared header with a logo or wordmark that links to the home page
 
 Selected Writing will be an organized list of links to work published elsewhere. The website will not host full essays or operate as a blog.
@@ -52,8 +53,9 @@ This division keeps the website portable: the static Astro output can be moved t
 
 ```text
 /             Home
-/about/       Biography, portrait, and optional contact information
+/about/       Biography and portrait
 /writing/     Organized links to external publications
+/contact/     Email contact information
 ```
 
 StoryGraph will be an external navigation link rather than an internal route.
@@ -87,7 +89,7 @@ The initial categories and exact ordering will be determined from the writing li
 
 - Create a global layout.
 - Add the linked logo or name-based wordmark in the upper-left.
-- Add navigation links for About, Selected Writing, and StoryGraph.
+- Add navigation links for About, Selected Writing, StoryGraph, and Contact.
 - Display the shared header on every internal page.
 - Make the header and navigation responsive.
 - Decide whether StoryGraph should open in the same tab or a new tab. If it opens a new tab, include the appropriate security attributes and an accessible indication that it is external.
@@ -95,7 +97,7 @@ The initial categories and exact ordering will be determined from the writing li
 ### 3. Build the home page
 
 - Introduce Katherine's name or visual identity.
-- Present the three destinations clearly.
+- Present the four destinations clearly.
 - Use temporary content only where final copy or assets have not yet been supplied.
 
 ### 4. Build the About page
@@ -117,14 +119,19 @@ The initial categories and exact ordering will be determined from the writing li
 - Add Katherine's StoryGraph profile URL to the shared navigation and any agreed home-page treatment.
 - Confirm the external link works and is presented consistently.
 
-### 7. Develop the visual direction
+### 7. Add the Contact page
+
+- Display Katherine's writing email address as a direct email link.
+- Keep Contact last in the shared navigation and home-page destination list.
+
+### 8. Develop the visual direction
 
 - Discuss and choose typography, colors, spacing, layout, logo treatment, and interaction details.
 - Implement responsive designs for mobile and desktop.
 - Add animation only where it supports the agreed design.
 - Maintain visible keyboard focus states, sufficient contrast, and reduced-motion behavior where relevant.
 
-### 8. Add launch essentials
+### 9. Add launch essentials
 
 - Unique page titles and descriptions
 - Social-sharing metadata and image
@@ -134,7 +141,7 @@ The initial categories and exact ordering will be determined from the writing li
 - Custom 404 page
 - Semantic HTML, keyboard navigation, descriptive link text, and accessibility checks
 
-### 9. Verify locally
+### 10. Verify locally
 
 - Run the production build.
 - Check all internal and external links.
@@ -143,26 +150,26 @@ The initial categories and exact ordering will be determined from the writing li
 - Check representative browsers.
 - Confirm that core navigation and content work without unnecessary client-side JavaScript.
 
-### 10. Create and connect the GitHub repository
+### 11. Create and connect the GitHub repository
 
 - Create the GitHub repository, initially private if desired.
 - Authenticate or authorize GitHub access if it is not already configured.
 - Connect the local Git repository to the GitHub remote.
 - Push the existing commit history.
 
-### 11. Deploy to Vercel
+### 12. Deploy to Vercel
 
 - Import the GitHub repository into Vercel.
 - Verify the temporary `vercel.app` deployment.
 - Confirm that pushes trigger production deployments and branches or pull requests can generate previews.
 
-### 12. Purchase the domain through Cloudflare Registrar
+### 13. Purchase the domain through Cloudflare Registrar
 
 - Confirm the chosen domain's registration and renewal prices.
 - Purchase it when the name is finalized. This may happen earlier if reserving the exact name is time-sensitive.
 - Keep Cloudflare as the authoritative DNS provider, as required for domains registered there.
 
-### 13. Connect the custom domain
+### 14. Connect the custom domain
 
 - Add the apex domain and `www` hostname to the Vercel project.
 - Choose one as canonical and redirect the other.
@@ -170,7 +177,7 @@ The initial categories and exact ordering will be determined from the writing li
 - Add those records through the Cloudflare DNS dashboard.
 - Keep in mind that this may require copying records manually even if an automated connection option is offered.
 
-### 14. Perform final production verification
+### 15. Perform final production verification
 
 - Confirm DNS resolution and HTTPS on the real domain.
 - Confirm the canonical-domain redirect.
@@ -203,4 +210,3 @@ These can be evaluated later without changing the core domain, DNS, repository, 
 - Contact and social links to include, if any
 - Visual references and preferences for typography, color, and motion
 - Final domain choice
-
