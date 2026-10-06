@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import aboutPhoto from '../assets/about-photo.jpg';
 ---
 
 <BaseLayout
@@ -8,12 +10,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <section class="about-introduction" aria-labelledby="about-heading">
     <h1 id="about-heading">About</h1>
-    <p>
-      Katherine Wong is a writer from California and Taiwan. She studied
-      Symbolic Systems and Creative Writing at Stanford University, where she
-      worked on fiction with a Wallace Stegner Fellow through Stanford's
-      Levinthal Tutorial program. She is currently writing a novel.
-    </p>
+    <div class="about-content">
+      <p>
+        Katherine Wong is a writer from California and Taiwan. She studied
+        Symbolic Systems and Creative Writing at Stanford University, where she
+        worked on fiction with a Wallace Stegner Fellow through Stanford's
+        Levinthal Tutorial program. She is currently writing a novel.
+      </p>
+      <Image
+        src={aboutPhoto}
+        alt="Katherine Wong seated on a staircase"
+        width={704}
+        format="webp"
+        quality={85}
+      />
+    </div>
   </section>
 </BaseLayout>
 
@@ -23,7 +34,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     gap: clamp(2.5rem, 8vw, 7rem);
   }
 
+  .about-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 22rem);
+    align-items: start;
+    gap: clamp(2.5rem, 7vw, 6rem);
+  }
+
   p {
     margin: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 44rem) {
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+
+    img {
+      width: min(100%, 24rem);
+    }
   }
 </style>
