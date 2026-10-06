@@ -11,11 +11,12 @@
   --font-display: 'Playwrite HR Guides Continuous', cursive;
   --font-body: 'Gaegu', sans-serif;
   --color-ink: #3b2a22;
+  --color-paper: #fdfcf8;
   --font-size-title: clamp(2.1rem, 3.5vw, 3rem);
   --font-size-body: clamp(1.05rem, 1.4vw, 1.2rem);
   font-family: var(--font-body);
   color: var(--color-ink);
-  background: #ffffff;
+  background: var(--color-paper);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -28,12 +29,13 @@
 
 html {
   min-width: 20rem;
-  background: #ffffff;
+  background: var(--color-paper);
 }
 
 body {
   min-height: 100vh;
   margin: 0;
+  background: var(--color-paper);
 }
 
 main {
