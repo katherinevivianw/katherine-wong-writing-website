@@ -45,8 +45,6 @@ import { site } from '../config';
   h1 {
     align-self: end;
     margin-left: clamp(0rem, 8vw, 6rem);
-    font-size: clamp(2rem, 3.5vw, 3.25rem);
-    letter-spacing: -0.035em;
   }
 
   .home-navigation {
@@ -65,8 +63,9 @@ import { site } from '../config';
   a {
     position: relative;
     color: inherit;
-    font-size: clamp(1rem, 1.4vw, 1.15rem);
-    font-style: italic;
+    font-size: var(--font-size-body);
+    font-style: normal;
+    font-weight: 400;
     text-decoration-color: transparent;
     text-decoration-thickness: 0.08em;
     text-underline-offset: 0.35em;
@@ -81,7 +80,6 @@ import { site } from '../config';
     display: inline-block;
     margin-left: 0.12em;
     font-size: 0.78em;
-    font-style: normal;
     transform: translateY(-0.12em);
   }
 
