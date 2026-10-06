@@ -8,12 +8,12 @@ The MVP will contain:
 
 - A home page
 - An About page
-- A Selected Writing page
+- A Writing page
 - An external link to Katherine's StoryGraph profile
 - A Contact page
 - A shared header with a logo or wordmark that links to the home page
 
-Selected Writing will be an organized list of links to work published elsewhere. The website will not host full essays or operate as a blog.
+Writing will be an organized list of links to work published elsewhere. The website will not host full essays or operate as a blog.
 
 ## Proposed architecture
 
@@ -42,7 +42,7 @@ Astro static site
 
 - **Astro:** Generates a fast, mostly static site while allowing reusable layouts and components.
 - **Plain CSS:** Keeps the initial implementation lightweight and gives the visual design room to develop without adopting a UI framework.
-- **Structured publication data:** Selected Writing entries will be maintained as data and rendered consistently. No Markdown essay collection, database, or CMS is needed for the MVP.
+- **Structured publication data:** Writing entries will be maintained as data and rendered consistently. No Markdown essay collection, database, or CMS is needed for the MVP.
 - **Git and GitHub:** Provide version control, a remote source of truth, and the source used by Vercel deployments.
 - **Vercel:** Hosts production and preview deployments and provisions HTTPS for the custom domain.
 - **Cloudflare Registrar and DNS:** Registers the domain and maintains the authoritative DNS records that point it to Vercel.
@@ -60,9 +60,9 @@ This division keeps the website portable: the static Astro output can be moved t
 
 StoryGraph will be an external navigation link rather than an internal route.
 
-The logo or wordmark in the upper-left corner will link to `/` from every internal page. About and Selected Writing will be normal page links, not interface tabs.
+The logo or wordmark in the upper-left corner will link to `/` from every internal page. About and Writing will be normal page links, not interface tabs.
 
-## Selected Writing content model
+## Writing content model
 
 Each publication entry should be able to contain:
 
@@ -89,7 +89,7 @@ The initial categories and exact ordering will be determined from the writing li
 
 - Create a global layout.
 - Add the linked logo or name-based wordmark in the upper-left.
-- Add navigation links for About, Selected Writing, StoryGraph, and Contact.
+- Add navigation links for About, Writing, StoryGraph, and Contact.
 - Display the shared header on every internal page.
 - Make the header and navigation responsive.
 - Decide whether StoryGraph should open in the same tab or a new tab. If it opens a new tab, include the appropriate security attributes and an accessible indication that it is external.
@@ -106,7 +106,7 @@ The initial categories and exact ordering will be determined from the writing li
 - Optimize the portrait for the web and provide meaningful alternative text.
 - Add contact, social, representation, location, or other details only if desired.
 
-### 5. Build the Selected Writing page
+### 5. Build the Writing page
 
 - Add the supplied publication list as structured data.
 - Organize entries using the agreed categories and order.
@@ -205,7 +205,7 @@ These can be evaluated later without changing the core domain, DNS, repository, 
 - Home-page copy, if any
 - Biography
 - Portrait and preferred alternative-text description
-- Selected Writing entries, categories, and desired ordering
+- Writing entries, categories, and desired ordering
 - StoryGraph profile URL
 - Contact and social links to include, if any
 - Visual references and preferences for typography, color, and motion
