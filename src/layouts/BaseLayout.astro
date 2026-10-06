@@ -1,6 +1,7 @@
 ---
 import { ClientRouter, fade } from 'astro:transitions';
 import SiteHeader from '../components/SiteHeader.astro';
+import SocialFooter from '../components/SocialFooter.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -42,5 +43,6 @@ const {
     <main id="main-content" class={mainClass}>
       <slot />
     </main>
+    <SocialFooter />
   </body>
 </html>

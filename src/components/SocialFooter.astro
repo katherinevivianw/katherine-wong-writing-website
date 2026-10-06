@@ -1,0 +1,78 @@
+---
+import { site } from '../config';
+---
+
+<footer class="social-footer" aria-label="Social media">
+  <a
+    href={site.instagramUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram (opens in a new tab)"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4.25" />
+      <circle class="icon-dot" cx="17.4" cy="6.7" r="1.15" />
+    </svg>
+  </a>
+  <a
+    href={site.tiktokUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok (opens in a new tab)"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        class="icon-fill"
+        d="M15.5 3.25c.45 2.03 1.67 3.45 3.75 4.05v3.08a8.17 8.17 0 0 1-3.72-1.24v6.06a6.15 6.15 0 1 1-5.32-6.09v3.12a3.08 3.08 0 1 0 2.2 2.95V3.25h3.09Z"
+      />
+    </svg>
+  </a>
+</footer>
+
+<style>
+  .social-footer {
+    display: flex;
+    flex: none;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.5rem;
+  }
+
+  a {
+    display: grid;
+    width: 1.45rem;
+    height: 1.45rem;
+    color: var(--color-ink);
+    place-items: center;
+    transition: opacity 150ms ease;
+  }
+
+  a:hover {
+    opacity: 0.62;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+  }
+
+  .icon-dot,
+  .icon-fill {
+    fill: currentColor;
+    stroke: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a {
+      transition: none;
+    }
+  }
+</style>
