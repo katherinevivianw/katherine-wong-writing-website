@@ -1,10 +1,108 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config';
 ---
 
 <BaseLayout
   title="Katherine Wong"
   description="The personal writing website of Katherine Wong."
+  showHeader={false}
+  mainClass="home-main"
 >
-  <h1>Katherine Wong</h1>
+  <div class="home-index">
+    <h1>{site.name}</h1>
+
+    <nav class="home-navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="/writing/">Selected Writing</a></li>
+        <li><a href="/about/">About</a></li>
+        <li>
+          <a
+            href={site.storyGraphUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            StoryGraph
+            <span class="external-mark" aria-hidden="true">↗</span>
+            <span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </BaseLayout>
+
+<style>
+  .home-index {
+    display: grid;
+    grid-template-rows: 1fr 1.25fr;
+    width: min(100% - 3rem, 72rem);
+    min-height: 100svh;
+    margin-inline: auto;
+    padding-block: clamp(3rem, 9vh, 7rem);
+  }
+
+  h1 {
+    align-self: end;
+    margin-left: clamp(0rem, 8vw, 6rem);
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    letter-spacing: -0.035em;
+  }
+
+  .home-navigation {
+    align-self: center;
+    margin-left: clamp(4rem, 29vw, 22rem);
+  }
+
+  ul {
+    display: grid;
+    gap: 1.1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    position: relative;
+    color: inherit;
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    font-style: italic;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.35em;
+    transition: text-decoration-color 150ms ease;
+  }
+
+  a:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .external-mark {
+    display: inline-block;
+    margin-left: 0.12em;
+    font-size: 0.78em;
+    font-style: normal;
+    transform: translateY(-0.12em);
+  }
+
+  @media (max-width: 40rem) {
+    .home-index {
+      grid-template-rows: 1fr 1.3fr;
+      padding-block: 2rem;
+    }
+
+    h1 {
+      margin-left: 0;
+    }
+
+    .home-navigation {
+      margin-left: clamp(2.5rem, 22vw, 7rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a {
+      transition: none;
+    }
+  }
+</style>

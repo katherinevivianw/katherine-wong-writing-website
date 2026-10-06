@@ -5,9 +5,16 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  showHeader?: boolean;
+  mainClass?: string;
 }
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  showHeader = true,
+  mainClass,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -20,8 +27,8 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <SiteHeader />
-    <main id="main-content">
+    {showHeader && <SiteHeader />}
+    <main id="main-content" class={mainClass}>
       <slot />
     </main>
   </body>
