@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ExternalArrow from '../components/ExternalArrow.astro';
 import { site } from '../config';
 ---
 
@@ -27,7 +28,7 @@ import { site } from '../config';
             rel="noopener noreferrer"
           >
             StoryGraph
-            <span class="external-mark" aria-hidden="true">↗</span>
+            <ExternalArrow />
             <span class="visually-hidden"> (opens in a new tab)</span>
           </a>
         </li>
@@ -80,13 +81,6 @@ import { site } from '../config';
 
   a:hover {
     text-decoration-color: currentColor;
-  }
-
-  .external-mark {
-    display: inline-block;
-    margin-left: 0.12em;
-    font-size: 0.78em;
-    transform: translateY(-0.12em);
   }
 
   @media (max-width: 40rem) {

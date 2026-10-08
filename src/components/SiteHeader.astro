@@ -1,5 +1,6 @@
 ---
 import { site } from '../config';
+import ExternalArrow from './ExternalArrow.astro';
 
 const currentPath = Astro.url.pathname;
 
@@ -32,7 +33,7 @@ const navigation = [
           rel="noopener noreferrer"
         >
           StoryGraph
-          <span class="external-mark" aria-hidden="true">↗</span>
+          <ExternalArrow />
           <span class="visually-hidden"> (opens in a new tab)</span>
         </a>
       </li>
@@ -92,13 +93,6 @@ const navigation = [
   nav a:hover,
   nav a[aria-current='page'] {
     text-decoration-color: currentColor;
-  }
-
-  .external-mark {
-    display: inline-block;
-    margin-left: 0.1em;
-    font-size: 0.8em;
-    transform: translateY(-0.15em);
   }
 
   @media (max-width: 40rem) {
