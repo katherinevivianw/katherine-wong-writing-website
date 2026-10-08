@@ -141,6 +141,8 @@ The initial categories and exact ordering will be determined from the writing li
 - Custom 404 page
 - Semantic HTML, keyboard navigation, descriptive link text, and accessibility checks
 
+The favicon, social-sharing image, canonical URLs, and sitemap are deferred until the identity assets and final domain are available.
+
 ### 10. Verify locally
 
 - Run the production build.

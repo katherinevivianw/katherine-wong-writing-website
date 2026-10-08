@@ -9,6 +9,7 @@ interface Props {
   description: string;
   showHeader?: boolean;
   mainClass?: string;
+  noIndex?: boolean;
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   description,
   showHeader = true,
   mainClass,
+  noIndex = false,
 } = Astro.props;
 ---
 
@@ -29,6 +31,16 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    {noIndex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#fdfcf8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Katherine Wong" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
       href="https://fonts.bunny.net/css?family=gaegu:400"
