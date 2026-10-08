@@ -9,8 +9,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="contact" aria-labelledby="contact-heading">
     <h1 id="contact-heading">Contact</h1>
     <p>
-      <a href="mailto:katherinewongwriting@gmail.com">
-        katherinewongwriting@gmail.com
+      <a class="email-link" href="mailto:katherinewongwriting@gmail.com">
+        <svg
+          class="email-icon"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <rect x="2.75" y="5.25" width="18.5" height="13.5" rx="1.75" />
+          <path d="m4 7 8 6 8-6" />
+        </svg>
+        <span>katherinewongwriting@gmail.com</span>
       </a>
     </p>
   </section>
@@ -26,9 +41,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 0;
   }
 
-  p a {
+  .email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
     color: inherit;
     text-decoration-thickness: 0.08em;
     text-underline-offset: 0.3em;
+  }
+
+  .email-icon {
+    flex: none;
   }
 </style>
