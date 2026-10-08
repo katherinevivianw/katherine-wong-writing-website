@@ -19,6 +19,8 @@ const {
   mainClass,
   noIndex = false,
 } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 ---
 
 <!doctype html>
@@ -32,11 +34,13 @@ const {
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     {noIndex && <meta name="robots" content="noindex" />}
+    {!noIndex && <link rel="canonical" href={canonicalUrl} />}
     <meta name="theme-color" content="#fdfcf8" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Katherine Wong" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    {!noIndex && <meta property="og:url" content={canonicalUrl} />}
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
